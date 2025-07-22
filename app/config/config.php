@@ -5,20 +5,22 @@
  *  Base URL
  *  -------------------------------------------
  *
-*/
-class url{
-    function base_url(){
-        return "http://localhost/capstone%20ni%20carl/";
-     }
+ */
+class url
+{
+    function base_url()
+    {
+        return "http://localhost/capstone-carl/";
+    }
 }
- 
 
- /*
+
+/*
  *  -------------------------------------------
  *  App General Config
  *  -------------------------------------------
  *
-*/
+ */
 
 $GLOBALS['config'] = array(
     "mysql" => array(
@@ -28,7 +30,7 @@ $GLOBALS['config'] = array(
         "db_name" => "ims",
         "db_charset" => "utf8"
     ),
-     
+
 );
 
 ?>
