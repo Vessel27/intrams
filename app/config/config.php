@@ -8,7 +8,7 @@
 */
 class url{
     function base_url(){
-        return "http://192.168.123.51/capstone%20ni%20carl/";
+        return "http://192.168.1.61/capstone%20ni%20carl/";
      }
 }
  
