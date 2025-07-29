@@ -27,7 +27,7 @@
           </div>
           <div class="col-12 col-lg-6 text-center">
             <h1 class="display-5 fw-bold lh-1 mb-3 hero-title">Intramurals 2025</h1>
-            <p class="lead hero-lead">State University Of Northern Negros blah blah text nadi</p>
+            <p class="lead hero-lead">State University Of Northern Negros</p>
           </div>
         </div>
       </div>
