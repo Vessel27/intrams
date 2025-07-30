@@ -4,126 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - SUNN Intramurals</title>
-    <link href="<?php echo $url->base_url(); ?>public/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo $url->base_url(); ?>public/assets/fontawesome/css/all.min.css" rel="stylesheet">
-    <link href="<?php echo $url->base_url(); ?>public/assets/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="<?php echo $url->base_url(); ?>public/assets/css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="c-app">
+    <?php include 'admin/navbar.php'; ?>
+    
+    <!-- Main content -->
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
-            <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
-                <div class="position-sticky pt-3">
-                    <div class="text-center mb-4">
-                        <h4 class="text-white">SUNN Admin</h4>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+                <!-- Dashboard Header -->
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-4">
+                    <div>
+                        <h1 class="h2 mb-0">
+                            <i class="bi bi-speedometer2 me-2 text-primary"></i>Dashboard
+                        </h1>
+                        <p class="text-muted mb-0">Welcome back! Here's what's happening today.</p>
                     </div>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link text-white active" href="#dashboard">
-                                <i class="fas fa-tachometer-alt me-2"></i>Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#users">
-                                <i class="fas fa-users me-2"></i>User Management
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#events">
-                                <i class="fas fa-calendar me-2"></i>Events
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#schedule">
-                                <i class="fas fa-clock me-2"></i>Schedule
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#results">
-                                <i class="fas fa-trophy me-2"></i>Results
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#reports">
-                                <i class="fas fa-chart-bar me-2"></i>Reports
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <!-- Main content -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group me-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                        </div>
+                        <button type="button" class="btn btn-outline-primary">
+                            <i class="bi bi-download me-1"></i>Export
+                        </button>
                     </div>
                 </div>
 
-                <!-- Stats Cards -->
+                <!-- Dashboard Cards -->
                 <div class="row mb-4">
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card stat-card bg-gradient-primary text-white h-100">
                             <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Events</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">15</div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fs-2 fw-bold">150</div>
+                                        <div class="fs-6 opacity-75">Total Users</div>
+                                        <small class="opacity-75">
+                                            <i class="bi bi-arrow-up me-1"></i>12% from last month
+                                        </small>
                                     </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    <div class="stat-icon">
+                                        <i class="bi bi-people"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card stat-card bg-gradient-success text-white h-100">
                             <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Active Users</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">156</div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fs-2 fw-bold">25</div>
+                                        <div class="fs-6 opacity-75">Active Events</div>
+                                        <small class="opacity-75">
+                                            <i class="bi bi-arrow-up me-1"></i>8% from last week
+                                        </small>
                                     </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                                    <div class="stat-icon">
+                                        <i class="bi bi-calendar-event"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card stat-card bg-gradient-warning text-white h-100">
                             <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Colleges</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">8</div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fs-2 fw-bold">12</div>
+                                        <div class="fs-6 opacity-75">Teams</div>
+                                        <small class="opacity-75">
+                                            <i class="bi bi-dash me-1"></i>No change
+                                        </small>
                                     </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-university fa-2x text-gray-300"></i>
+                                    <div class="stat-icon">
+                                        <i class="bi bi-shield-check"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card stat-card bg-gradient-danger text-white h-100">
                             <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Results</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="fs-2 fw-bold">8</div>
+                                        <div class="fs-6 opacity-75">Matches Today</div>
+                                        <small class="opacity-75">
+                                            <i class="bi bi-arrow-up me-1"></i>3 more than yesterday
+                                        </small>
                                     </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-clock fa-2x text-gray-300"></i>
+                                    <div class="stat-icon">
+                                        <i class="bi bi-trophy"></i>
                                     </div>
                                 </div>
                             </div>
@@ -131,56 +106,77 @@
                     </div>
                 </div>
 
-                <!-- Recent Events Table -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Recent Events</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>Event</th>
-                                        <th>Date</th>
-                                        <th>Venue</th>
-                                        <th>Status</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Basketball Finals</td>
-                                        <td>2024-01-15</td>
-                                        <td>Main Gymnasium</td>
-                                        <td><span class="badge bg-success">Completed</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-primary">View</button>
-                                            <button class="btn btn-sm btn-warning">Edit</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Volleyball Semifinals</td>
-                                        <td>2024-01-18</td>
-                                        <td>Sports Complex</td>
-                                        <td><span class="badge bg-warning">Ongoing</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-primary">View</button>
-                                            <button class="btn btn-sm btn-warning">Edit</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Swimming Competition</td>
-                                        <td>2024-01-20</td>
-                                        <td>Aquatic Center</td>
-                                        <td><span class="badge bg-secondary">Scheduled</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-primary">View</button>
-                                            <button class="btn btn-sm btn-warning">Edit</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <!-- Content Sections -->
+                <div id="dashboard" class="content-section active">
+                    <div class="row">
+                        <div class="col-lg-8 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="mb-0">
+                                        <i class="bi bi-activity me-2 text-primary"></i>Recent Activities
+                                    </h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="list-group list-group-flush">
+                                        <div class="list-group-item border-0 py-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="activity-icon bg-primary">
+                                                    <i class="bi bi-trophy text-white"></i>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h6 class="mb-1">Basketball Finals</h6>
+                                                    <p class="mb-1 text-muted">Team A vs Team B scheduled for tomorrow</p>
+                                                    <small class="text-muted">
+                                                        <i class="bi bi-clock me-1"></i>2 hours ago
+                                                    </small>
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill">New</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item border-0 py-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="activity-icon bg-success">
+                                                    <i class="bi bi-person-plus text-white"></i>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h6 class="mb-1">User Registration</h6>
+                                                    <p class="mb-1 text-muted">5 new users registered today</p>
+                                                    <small class="text-muted">
+                                                        <i class="bi bi-clock me-1"></i>4 hours ago
+                                                    </small>
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">Info</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-header bg-white border-bottom">
+                                    <h5 class="mb-0">
+                                        <i class="bi bi-lightning me-2 text-warning"></i>Quick Actions
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-3">
+                                        <button class="btn btn-primary btn-lg" type="button">
+                                            <i class="bi bi-plus-circle me-2"></i>Add New Event
+                                        </button>
+                                        <button class="btn btn-success btn-lg" type="button">
+                                            <i class="bi bi-people me-2"></i>Create Team
+                                        </button>
+                                        <button class="btn btn-warning btn-lg" type="button">
+                                            <i class="bi bi-calendar-plus me-2"></i>Schedule Match
+                                        </button>
+                                        <button class="btn btn-info btn-lg" type="button">
+                                            <i class="bi bi-file-earmark-text me-2"></i>Generate Report
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -188,6 +184,10 @@
         </div>
     </div>
 
+    <!-- Bootstrap JS -->
     <script src="<?php echo $url->base_url(); ?>public/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- CoreUI JS -->
+    <script src="<?php echo $url->base_url(); ?>public/assets/js/coreui.min.js"></script>
+    <script src="<?php echo $url->base_url(); ?>public/assets/css/admin.js"></script>
 </body>
 </html>

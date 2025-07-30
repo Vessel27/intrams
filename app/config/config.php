@@ -8,8 +8,11 @@
 */
 class url{
     function base_url(){
-        return "http://192.168.1.61/capstone%20ni%20carl/";
-     }
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+        $host = $_SERVER['HTTP_HOST'];
+        $path = dirname($_SERVER['SCRIPT_NAME']);
+        return $protocol . $host . $path . '/';
+    }
 }
  
 

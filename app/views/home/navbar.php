@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="<?php echo $url->base_url(); ?>public/assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="<?php echo $url->base_url(); ?>public/assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $url->base_url(); ?>public/assets/css/bootstrap.min.css">
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="<?php echo $url->base_url(); ?>public/assets/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="<?php echo $url->base_url(); ?>public/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- CoreUI JS -->
+    <script src="<?php echo $url->base_url(); ?>public/assets/js/coreui.min.js"></script>
+    <script src="<?php echo $url->base_url(); ?>public/assets/css/admin.js"></script>
 
-<!-- FOR NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light">
 <div class="container-fluid bg-light">
   <a class="navbar-brand" href="<?php echo $url->base_url()?>home">Intramural Management System</a>
