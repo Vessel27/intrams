@@ -6,7 +6,7 @@
     <title>Admin Dashboard - SUNN Intramurals</title>
 </head>
 <body class="c-app">
-    <?php include 'admin/navbar.php'; ?>
+    <?php include 'dashboard/navbar.php'; ?>
     
     <!-- Main content -->
     <div class="container-fluid">
@@ -183,11 +183,5 @@
             </main>
         </div>
     </div>
-
-    <!-- Bootstrap JS -->
-    <script src="<?php echo $url->base_url(); ?>public/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- CoreUI JS -->
-    <script src="<?php echo $url->base_url(); ?>public/assets/js/coreui.min.js"></script>
-    <script src="<?php echo $url->base_url(); ?>public/assets/css/admin.js"></script>
 </body>
 </html>

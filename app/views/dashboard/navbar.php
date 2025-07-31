@@ -19,7 +19,7 @@
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand ms-3" href="#">
+        <a class="navbar-brand ms-3" href="<?php echo $url->base_url(); ?>admin">
             <i class="bi bi-trophy-fill me-2"></i>SUNN Admin
         </a>
         <div class="navbar-nav ms-auto">
@@ -43,37 +43,37 @@
     <div class="position-sticky pt-3">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" href="#dashboard" data-section="dashboard">
+                <a class="nav-link active" href="<?php echo $url->base_url(); ?>admin" data-section="dashboard">
                     <i class="bi bi-speedometer2"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#users" data-section="users">
+                <a class="nav-link" href="#" data-section="users">
                     <i class="bi bi-people"></i>
                     <span>User Management</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#events" data-section="events">
+                <a class="nav-link" href="<?php echo $url->base_url(); ?>event" data-section="events">
                     <i class="bi bi-calendar-event"></i>
                     <span>Events</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#schedule" data-section="schedule">
+                <a class="nav-link" href="<?php echo $url->base_url(); ?>schedule" data-section="schedule">
                     <i class="bi bi-clock"></i>
                     <span>Schedule</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#results" data-section="results">
+                <a class="nav-link" href="<?php echo $url->base_url(); ?>result" data-section="results">
                     <i class="bi bi-trophy"></i>
                     <span>Results</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#reports" data-section="reports">
+                <a class="nav-link" href="<?php echo $url->base_url(); ?>report" data-section="reports">
                     <i class="bi bi-bar-chart"></i>
                     <span>Reports</span>
                 </a>
