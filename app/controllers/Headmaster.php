@@ -1,6 +1,6 @@
 <?php
 
-class Headmasters extends Controller{
+class Headmaster extends Controller{
     public function index(){
         $this->view("headmaster");
     }
